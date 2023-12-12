@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnadirPokemon">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anadir Pokemon"
+        android:id="@+id/titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginVertical="20dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guidelinemitad"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear1"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginVertical="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textinputlayoutnom"
+                app:layout_constraintTop_toBottomOf="@id/titulo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guidelinemitad"
+                android:enabled="true"
+                tools:ignore="NotSibling"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:textSize="16sp"
+                    android:id="@+id/textinputedittextnom"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nombre"
+                android:id="@+id/tnom"
+                app:layout_constraintTop_toBottomOf="@id/titulo"
+                app:layout_constraintStart_toEndOf="@+id/guidelinemitad"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:ignore="NotSibling"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear2"
+        app:layout_constraintTop_toBottomOf="@id/linear1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginVertical="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textinputlayoutent"
+                app:layout_constraintTop_toBottomOf="@id/linear1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guidelinemitad"
+                android:enabled="true"
+                tools:ignore="NotSibling"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:textSize="16sp"
+                    android:id="@+id/textinputedittextent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="entrenador"
+                android:id="@+id/tent"
+                app:layout_constraintTop_toBottomOf="@id/titulo"
+                app:layout_constraintStart_toEndOf="@+id/guidelinemitad"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:ignore="NotSibling"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear3"
+        app:layout_constraintTop_toBottomOf="@id/linear2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        android:layout_marginVertical="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tipo"
+                android:id="@+id/ttipo"
+                app:layout_constraintTop_toBottomOf="@id/linear2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guidelinemitad"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:ignore="NotSibling"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"/>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ttipo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guidelinemitad"
+                android:spinnerMode="dropdown"
+                tools:ignore="NotSibling"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear4"
+        app:layout_constraintTop_toBottomOf="@id/linear2"
+        app:layout_constraintStart_toEndOf="parent"
+        android:orientation="vertical"
+        android:layout_marginVertical="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="estatura"
+                android:id="@+id/esta"
+                app:layout_constraintTop_toBottomOf="@id/linear2"
+                app:layout_constraintStart_toEndOf="@+id/guidelinemitad"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:ignore="NotSibling"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textinputlayoutesta"
+                app:layout_constraintTop_toBottomOf="@id/esta"
+                app:layout_constraintStart_toEndOf="@+id/guidelinemitad"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:enabled="true"
+                tools:ignore="NotSibling"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:textSize="16sp"
+                    android:id="@+id/textinputedittexesta"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear5"
+        app:layout_constraintTop_toBottomOf="@id/linear3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        android:layout_marginVertical="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="comentarios"
+                android:id="@+id/tcomen"
+                app:layout_constraintTop_toBottomOf="@id/linear3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:ignore="NotSibling"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textinputlayoutcomen"
+                app:layout_constraintTop_toBottomOf="@id/tcomen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:enabled="true"
+                tools:ignore="NotSibling"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:textSize="16sp"
+                    android:id="@+id/textinputedittexcomen"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear6"
+        app:layout_constraintTop_toBottomOf="@id/linear5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        android:layout_marginVertical="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fecha atrapado"
+                android:id="@+id/tfec"
+                app:layout_constraintTop_toBottomOf="@id/linear5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:ignore="NotSibling"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textinputlayoutfec"
+                app:layout_constraintTop_toBottomOf="@id/tfec"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:enabled="true"
+                tools:ignore="NotSibling"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:focusable="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:textSize="16sp"
+                    android:id="@+id/textinputedittexfec"
+                    android:focusable="false"
+                    android:inputType="date"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enviar"
+        app:layout_constraintTop_toBottomOf="@+id/linear6"
+        app:layout_constraintStart_toEndOf="@id/guidelinemitad"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="@color/blue"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
